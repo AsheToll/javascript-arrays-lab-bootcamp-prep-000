@@ -32,12 +32,13 @@ function appendKitten(name) {
 }
 // Prepend
 function prependKitten(name) {
-  kittens = [...kittens];
+  kittens = [name, ...kittens];
   return kittens;
 }
 // Remove Last
 function removeLastKitten() {
-  
+  kittens = kittens.slice(0, kittens.length - 1);
+  return kittens;
 }
 // Remove First
 function removeFirstKitten() {
